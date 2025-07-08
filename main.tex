@@ -16,6 +16,8 @@
 \usepackage{ragged2e}       % Cho phép căn đều văn bản (justifying), tốt hơn \justify
 \usepackage{booktabs}       % Cho bảng đẹp hơn với đường kẻ chuyên nghiệp (\toprule, \midrule, \bottomrule)
 \usepackage{enumitem}       % Tùy chỉnh danh sách (itemize, enumerate)
+\usepackage{microtype}      % Cải thiện kiểu chữ và căn chữ
+\usepackage{pifont}         % Bộ biểu tượng cho bullet tùy chỉnh
 \usepackage{float}          % Cho phép vị trí bảng/hình ảnh chính xác hơn [H]
 \usepackage{tabularx}       % Bảng có thể tự động điều chỉnh chiều rộng cột
 \usepackage{longtable}      % Cho bảng dài trải dài nhiều trang
@@ -30,8 +32,26 @@
 
 % --- Gói cho màu sắc ---
 \usepackage{xcolor}         % Định nghĩa và sử dụng màu sắc
+\usepackage[most]{tcolorbox} % Tạo khung màu chuyên nghiệp
 \definecolor{darkblue}{RGB}{0,82,155}   % Màu xanh đậm cho tiêu đề
 \definecolor{darkgreen}{RGB}{0,128,0}   % Màu xanh lá đậm cho URL
+
+% --- Tuỳ chỉnh danh sách ---
+\setlist[itemize]{leftmargin=1cm,label=\textcolor{darkblue}{\small\textbullet}}
+
+% --- Khung nổi bật cho phân tích rủi ro ---
+\newtcolorbox{riskbox}{
+    colback=white,
+    colframe=darkblue,
+    fonttitle=\bfseries,
+    coltitle=darkblue,
+    boxrule=0.5pt,
+    arc=2mm,
+    left=4pt,
+    right=4pt,
+    top=4pt,
+    bottom=4pt,
+}
 
 % --- Cấu hình định dạng tiêu đề ---
 % Sử dụng \normalfont để đảm bảo font không bị ảnh hưởng bởi các lệnh trước đó
@@ -734,6 +754,31 @@ Kế hoạch phát triển sản phẩm Smart Canteen AR sẽ được chia thà
         \end{itemize}
         \item \textbf{Kết quả mong đợi:} Smart Canteen AR trở thành giải pháp hàng đầu cho căng tin thông minh, có vị thế vững chắc trên thị trường.
     \end{itemize}
+
+\section{Phân tích rủi ro và biện pháp giảm thiểu}
+\begin{riskbox}
+\begin{itemize}
+    \item \textbf{Rủi ro kỹ thuật}: Công nghệ AR và thanh toán trực tuyến có thể
+    phát sinh lỗi khi vận hành ở quy mô lớn. \textit{Biện pháp:} thử nghiệm diện
+    rộng, áp dụng quy trình kiểm thử chặt chẽ và có phương án dự phòng.
+    \item \textbf{Rủi ro thị trường}: Người dùng còn mới lạ với AR hoặc thói quen
+    đặt món truyền thống. \textit{Biện pháp:} tăng cường hoạt động truyền thông
+    và hướng dẫn, đưa ra chính sách khuyến khích sử dụng ban đầu.
+    \item \textbf{Rủi ro vận hành}: Quá trình tích hợp với căng tin hiện hữu có thể
+    gặp khó khăn về hạ tầng hoặc nhân lực. \textit{Biện pháp:} xây dựng tài liệu
+    hướng dẫn chi tiết, đào tạo nhân viên và hỗ trợ kỹ thuật kịp thời.
+    \item \textbf{Rủi ro tài chính}: Chi phí duy trì hạ tầng, quảng bá có thể vượt
+    dự toán. \textit{Biện pháp:} lập ngân sách dự phòng và theo dõi sát sao các
+    chỉ số tài chính qua từng giai đoạn.
+\end{itemize}
+\end{riskbox}
+
+\section{Kết luận}
+Smart Canteen AR là giải pháp tiên phong ứng dụng thực tế tăng cường trong lĩnh
+vực căng tin thông minh. Dự án hướng tới nâng cao trải nghiệm người dùng, tối ưu
+quy trình vận hành và mở ra cơ hội chuyển đổi số mạnh mẽ cho ngành F\&B. Với kế
+hoạch phát triển bài bản cùng các biện pháp giảm thiểu rủi ro, nhóm tin tưởng dự
+án sẽ đạt được thành công bền vững trong tương lai.
 
 \clearpage % Bắt đầu trang mới cho tài liệu tham khảo
 \section{Tài liệu tham khảo}
