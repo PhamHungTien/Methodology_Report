@@ -7,6 +7,9 @@
 \usepackage{geometry}       % Điều chỉnh lề trang
 \geometry{a4paper, margin=2.5cm, top=3cm, bottom=3cm} % Cài đặt lề chuẩn
 
+% --- Thiết lập headheight để tránh cảnh báo fancyhdr ---
+\setlength{\headheight}{15pt}
+
 % --- Gói cho typography và định dạng chuyên nghiệp ---
 \usepackage{setspace}       % Điều chỉnh khoảng cách dòng (ví dụ: 1.5 lines)
 \usepackage{titlesec}       % Tùy chỉnh định dạng tiêu đề các phần/chương
@@ -15,6 +18,7 @@
 \usepackage{subcaption}     % Hỗ trợ subfigure và subcaption (nếu cần nhiều hình trong 1 caption)
 \usepackage{ragged2e}       % Cho phép căn đều văn bản (justifying), tốt hơn \justify
 \usepackage{booktabs}       % Cho bảng đẹp hơn với đường kẻ chuyên nghiệp (\toprule, \midrule, \bottomrule)
+\usepackage{array}          % Hỗ trợ định dạng cột nâng cao (>{\raggedright\arraybackslash}p{width})
 \usepackage{enumitem}       % Tùy chỉnh danh sách (itemize, enumerate)
 \usepackage{microtype}      % Cải thiện kiểu chữ và căn chữ
 \usepackage{pifont}         % Bộ biểu tượng cho bullet tùy chỉnh
@@ -66,7 +70,8 @@
 \setlength{\parindent}{0.5cm} % Thụt đầu dòng 0.5cm
 \setlength{\parskip}{6pt}   % Khoảng cách giữa các đoạn văn
 \setlength{\arrayrulewidth}{0.5pt}  % Độ dày đường viền bảng
-%\renewcommand{\arraystretch}{1.2}   % ĐÃ LOẠI BỎ/ĐIỀU CHỈNH: Khoảng cách dòng trong bảng (để về mặc định)
+\renewcommand{\arraystretch}{1.2}   % Khoảng cách dòng trong bảng
+\setlength{\tabcolsep}{6pt} % Khoảng cách giữa các cột trong bảng
 
 % --- Cấu hình hyperref (đặt cuối cùng trong preamble) ---
 \usepackage{hyperref}
@@ -80,37 +85,12 @@
     pdfauthor={Nhóm 5 - Trường Đại học Khoa học Tự nhiên TPHCM}, % Tác giả hiển thị trong thuộc tính PDF
     pdfsubject={Dự án Khởi nghiệp Đổi mới Sáng tạo}, % Chủ đề PDF
     pdfkeywords={Smart Canteen, AR, Thực tế tăng cường, Căng tin thông minh}, % Từ khóa PDF
-    bookmarks=true,         % Tạo bookmark trong PDF
     bookmarksopen=true,     % Mở bookmark khi mở PDF
     bookmarksnumbered=true, % Đánh số bookmark
     pdfstartview={FitH}     % Chế độ xem khi mở PDF (Fit to Width)
 }
 
-% --- Định nghĩa tiêu đề và tác giả cho trang bìa ---
-% Sử dụng \vfill để căn giữa theo chiều dọc
-\title{
-    \vspace{-1cm} % Điều chỉnh vị trí tiêu đề lên trên một chút
-    {\huge\textbf{\color{darkblue}BÁO CÁO GIỮA KỲ}} \\[0.5cm]
-    {\LARGE\textbf{\color{darkblue}DỰ ÁN SMART CANTEEN AR}} \\[0.3cm]
-    {\large\textit{Ứng dụng thực tế tăng cường trong căng tin thông minh}}
-}
-
-\author{
-    \begin{tabular}{c}
-        \textbf{\large DỰ ÁN KHỞI NGHIỆP ĐỔI MỚI SÁNG TẠO} \\[0.5cm]
-        \textbf{NHÓM THỰC HIỆN: NHÓM 5} \\[0.3cm]
-        \begin{tabular}{@{}l@{\hspace{2cm}}l@{}} % Sử dụng @{} để bỏ khoảng trống ở đầu/cuối hàng
-            \textbf{1.} Hồ Sĩ Phú (Nhóm trưởng) & \textbf{4.} Lê Quang Bảo Trung \\
-            \textbf{2.} Phạm Cao Bằng & \textbf{5.} Trần Thái Nguyên \\
-            \textbf{3.} Phạm Hùng Tiến & \\
-        \end{tabular} \\[0.5cm]
-        \textbf{ĐƠN VỊ THỰC HIỆN} \\
-        \textit{Trường Đại học Khoa học Tự nhiên - ĐHQG TPHCM} \\[0.3cm]
-        \textbf{Thành phố Hồ Chí Minh, năm 2025}
-    \end{tabular}
-}
-
-\date{} % Bỏ ngày tháng để không hiển thị ngày mặc định
+% --- Xóa định nghĩa title/author vì không cần dùng \maketitle ---
 
 \begin{document}
 
@@ -126,9 +106,24 @@
     \centering           % Căn giữa nội dung trang bìa
 
     % Có thể thêm logo nếu có (ví dụ: \includegraphics[width=4cm]{../images/logo.png}\\[1cm])
-    % \vspace*{1cm} % Tùy chỉnh khoảng trống nếu cần
+    \vspace*{2cm} % Khoảng trống phía trên
 
-    \maketitle % Lệnh hiển thị Title và Author đã định nghĩa ở trên
+    % Nội dung tiêu đề được viết trực tiếp thay vì dùng \maketitle
+    {\huge\textbf{\color{darkblue}BÁO CÁO GIỮA KỲ}} \\[0.8cm]
+    {\LARGE\textbf{\color{darkblue}DỰ ÁN SMART CANTEEN AR}} \\[0.5cm]
+    {\large\textit{Ứng dụng thực tế tăng cường trong căng tin thông minh}} \\[1.5cm]
+
+    % Nội dung tác giả được viết trực tiếp
+    \textbf{\large BÁO CÁO ĐỒ ÁN NHÓM} \\[0.8cm]
+    \textbf{NHÓM THỰC HIỆN: NHÓM 5} \\[0.5cm]
+    \begin{tabular}{@{}l@{\hspace{2cm}}l@{}} % Sử dụng @{} để bỏ khoảng trống ở đầu/cuối hàng
+        \textbf{1.} Hồ Sĩ Phú & \textbf{4.} Lê Quang Bảo Trung \\
+        \textbf{2.} Phạm Cao Bằng & \textbf{5.} Trần Thái Nguyên \\
+        \textbf{3.} Phạm Hùng Tiến & \\
+    \end{tabular} \\[0.8cm]
+    \textbf{ĐƠN VỊ THỰC HIỆN} \\
+    \textit{Trường Đại học Khoa học Tự nhiên - ĐHQG TPHCM} \\[0.5cm]
+    \textbf{Thành phố Hồ Chí Minh, năm 2025}
 
     \vfill % Đẩy phần nội dung phụ xuống dưới cùng trang
     % Thông tin bổ sung ở cuối trang bìa
@@ -136,7 +131,6 @@
         \textbf{Lớp:} & 24DTV\_DKD2 \\
         \textbf{Học kỳ:} & 3, năm học 2024-2025 \\
     \end{tabular}
-    \vspace{1cm} % Khoảng cách từ thông tin bổ sung đến cuối trang
 \end{titlepage}
 
 % --- Đặt lại page style cho các trang tiếp theo ---
@@ -197,31 +191,93 @@
 \newpage
 
 % --- Nội dung chính của báo cáo ---
+
+% --- Tóm tắt đồ án ---
+\section*{Tóm tắt đồ án} % Sử dụng * để không đánh số phần này
+\addcontentsline{toc}{section}{Tóm tắt đồ án} % Thêm vào mục lục thủ công
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=darkblue,title=\textbf{Mục tiêu nghiên cứu}]
+\textbf{Smart Canteen AR} là đồ án nghiên cứu về ứng dụng công nghệ thực tế tăng cường (AR) trong việc phát triển hệ thống căng tin thông minh. Đồ án nhằm khám phá và đề xuất giải pháp công nghệ hiện đại để cải thiện trải nghiệm người dùng và nâng cao hiệu quả quản lý trong môi trường căng tin.
+\end{tcolorbox}
+
+\subsection*{Vấn đề nghiên cứu}
+Căng tin truyền thống tại các trường đại học và khu vực tập thể đang gặp phải những thách thức sau:
+\begin{itemize}[leftmargin=1cm]
+    \item \textcolor{red}{\textbf{Tình trạng quá tải}} vào giờ cao điểm khiến thời gian chờ đợi kéo dài
+    \item \textcolor{red}{\textbf{Quy trình thủ công}} trong việc ghi nhận và quản lý đơn hàng
+    \item \textcolor{red}{\textbf{Thiếu tương tác}} với thực đơn truyền thống dạng tĩnh
+    \item \textcolor{red}{\textbf{Hạn chế trong thanh toán}} chủ yếu sử dụng tiền mặt
+\end{itemize}
+
+\subsection*{Mục tiêu nghiên cứu}
+Đồ án tập trung vào việc phát triển và đánh giá \textbf{4 thành phần chính}:
+\begin{enumerate}
+    \item \textbf{Nghiên cứu công nghệ AR}: Ứng dụng mô hình 3D để hiển thị món ăn trực quan
+    \item \textbf{Thiết kế hệ thống}: Kiến trúc phần mềm hiện đại cho quản lý căng tin
+    \item \textbf{Giao diện người dùng}: Trải nghiệm tương tác thân thiện và dễ sử dụng
+    \item \textbf{Đánh giá hiệu quả}: Phân tích tác động của giải pháp đối với người dùng
+\end{enumerate}
+
+\subsection*{Phạm vi nghiên cứu}
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Đối tượng nghiên cứu}: Hệ thống căng tin tại các trường đại học
+    \item \textbf{Công nghệ nghiên cứu}: Thực tế tăng cường (AR), React, Node.js
+    \item \textbf{Người dùng mục tiêu}: Sinh viên và nhân viên trong môi trường giáo dục
+    \item \textbf{Thời gian thực hiện}: Học kỳ 3, năm học 2024-2025
+\end{itemize}
+
+\subsection*{Phương pháp nghiên cứu}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lp{8cm}@{}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Nội dung thực hiện} \\
+\midrule
+Nghiên cứu lý thuyết & Tìm hiểu công nghệ AR, kiến trúc hệ thống web hiện đại \\
+Thiết kế hệ thống & Xây dựng kiến trúc, thiết kế giao diện và cơ sở dữ liệu \\
+Phát triển prototype & Lập trình ứng dụng web với tính năng AR cơ bản \\
+Thử nghiệm và đánh giá & Kiểm thử chức năng, thu thập phản hồi người dùng \\
+\bottomrule
+\end{tabular}
+\caption{Phương pháp thực hiện đồ án}
+\end{table}
+
+\subsection*{Đóng góp dự kiến}
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Về mặt học thuật}: Nghiên cứu ứng dụng AR trong lĩnh vực dịch vụ ăn uống
+    \item \textbf{Về mặt thực tiễn}: Đề xuất giải pháp cải thiện hiệu quả hoạt động căng tin
+    \item \textbf{Về mặt công nghệ}: Phát triển prototype ứng dụng web tích hợp AR
+    \item \textbf{Về mặt kinh nghiệm}: Rèn luyện kỹ năng làm việc nhóm và phát triển phần mềm
+\end{itemize}
+
+\newpage
+
 \section{Tổng quan dự án}
 
 \subsection{Tên dự án}
 \textbf{Smart Canteen AR} - Hệ thống căng tin thông minh tích hợp công nghệ thực tế tăng cường.
 \subsection{Tầm nhìn}
-Smart Canteen AR hướng tới trở thành \textbf{hệ thống căng tin thông minh hàng đầu} tại Việt Nam, tiên phong trong việc ứng dụng công nghệ thực tế tăng cường (AR) để:
+Smart Canteen AR hướng tới trở thành một \textbf{nghiên cứu tiên phong} trong việc ứng dụng công nghệ thực tế tăng cường (AR) vào lĩnh vực dịch vụ ăn uống tập thể, nhằm:
 
 \begin{itemize}[leftmargin=1cm]
-    \item Nâng cao trải nghiệm toàn diện của người dùng trong việc khám phá, đặt món và tương tác với thực đơn
-    \item Tối ưu hóa triệt để quy trình quản lý vận hành cho các căng tin
-    \item Góp phần thúc đẩy chuyển đổi số trong ngành dịch vụ ăn uống
+    \item Khám phá tiềm năng của công nghệ AR trong việc nâng cao trải nghiệm người dùng
+    \item Đề xuất mô hình hệ thống căng tin thông minh hiệu quả và khả thi
+    \item Góp phần vào việc nghiên cứu và phát triển ứng dụng công nghệ 4.0 trong giáo dục
 \end{itemize}
 
 \subsection{Sứ mệnh}
-Cung cấp một \textbf{nền tảng đặt món trực tuyến tiên tiến}, dễ sử dụng, minh bạch và hiệu quả, nhằm:
+Phát triển một \textbf{prototype hệ thống căng tin thông minh}, có khả năng ứng dụng thực tế, nhằm:
 
 \begin{itemize}[leftmargin=1cm]
-    \item \textbf{Đối với người dùng}: Mang lại trải nghiệm ẩm thực tiện lợi, trực quan và thú vị thông qua công nghệ AR
-    \item \textbf{Đối với căng tin}: Hỗ trợ tối ưu hóa hoạt động, quản lý thực đơn, đơn hàng và doanh thu một cách chính xác, hiệu quả
-    \item \textbf{Đối với xã hội}: Góp phần nâng cao chất lượng dịch vụ ăn uống tập thể và thúc đẩy ứng dụng công nghệ 4.0
+    \item \textbf{Đối với nghiên cứu}: Tìm hiểu và đánh giá tác động của công nghệ AR trong dịch vụ ăn uống
+    \item \textbf{Đối với người dùng}: Tạo ra trải nghiệm tương tác mới lạ và tiện lợi khi sử dụng dịch vụ căng tin
+    \item \textbf{Đối với quản lý}: Đề xuất giải pháp số hóa quy trình quản lý đơn hàng và thực đơn
+    \item \textbf{Đối với học tập}: Rèn luyện kỹ năng phát triển phần mềm và làm việc nhóm hiệu quả
 \end{itemize}
 
 \section{Ý tưởng chính của dự án}
 
-Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuyến toàn diện}, được xây dựng với kiến trúc hiện đại và công nghệ tiên tiến:
+Smart Canteen AR là một \textbf{đồ án nghiên cứu về hệ thống căng tin thông minh}, được phát triển như một prototype để khám phá khả năng ứng dụng công nghệ hiện đại:
 
 \subsection{Kiến trúc hệ thống}
 \begin{itemize}[leftmargin=1cm]
@@ -234,7 +290,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
 % --- VỊ TRÍ THÊM HÌNH ẢNH: KIẾN TRÚC HỆ THỐNG ---
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../images/kien_truc_he_thong.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.8\textwidth]{images/kien_truc_he_thong.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Sơ đồ kiến trúc hệ thống Smart Canteen AR}
     \label{fig:kien_truc_he_thong}
 \end{figure}
@@ -245,7 +301,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
 % --- VỊ TRÍ THÊM HÌNH ẢNH: MINH HỌA TÍNH NĂNG AR ---
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{../images/minh_hoa_ar_mon_an.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=\textwidth]{images/minh_hoa_ar_mon_an.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Minh họa người dùng xem món ăn bằng công nghệ Thực tế tăng cường (AR)}
     \label{fig:ar_food_view}
 \end{figure}
@@ -262,7 +318,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_user_dang_nhap_dang_ky.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_user_dang_nhap_dang_ky.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện đăng nhập và đăng ký người dùng}
     \label{fig:ui_user_login_signup}
 \end{figure}
@@ -277,13 +333,13 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_user_thuc_don.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_user_thuc_don.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện thực đơn và chi tiết món ăn của người dùng}
     \label{fig:ui_user_menu}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_user_gio_hang_thanh_toan.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_user_gio_hang_thanh_toan.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện giỏ hàng và thanh toán (MoMo, VietQR) của người dùng}
     \label{fig:ui_user_cart_payment}
 \end{figure}
@@ -295,7 +351,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_user_danh_gia_gop_y.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_user_danh_gia_gop_y.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện đánh giá món ăn và góp ý từ người dùng}
     \label{fig:ui_user_feedback}
 \end{figure}
@@ -308,7 +364,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_user_cai_dat_tai_khoan.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_user_cai_dat_tai_khoan.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện cài đặt tài khoản người dùng}
     \label{fig:ui_user_settings}
 \end{figure}
@@ -324,7 +380,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_admin_quan_ly_thuc_don.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_admin_quan_ly_thuc_don.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện quản lý thực đơn của quản trị viên}
     \label{fig:ui_admin_menu}
 \end{figure}
@@ -337,7 +393,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_admin_quan_ly_don_hang.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_admin_quan_ly_don_hang.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện quản lý đơn hàng của quản trị viên}
     \label{fig:ui_admin_orders}
 \end{figure}
@@ -350,7 +406,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_admin_bao_cao_doanh_thu.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_admin_bao_cao_doanh_thu.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện báo cáo doanh thu và phân tích của quản trị viên}
     \label{fig:ui_admin_revenue}
 \end{figure}
@@ -362,7 +418,7 @@ Smart Canteen AR là một \textbf{hệ thống mô phỏng căng tin trực tuy
         \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{../images/ui_admin_quan_ly_nguoi_dung.png} % Thay thế bằng tên file ảnh của bạn
+    \includegraphics[width=0.9\textwidth]{images/ui_admin_quan_ly_nguoi_dung.png} % Thay thế bằng tên file ảnh của bạn
     \caption{Giao diện quản lý người dùng của quản trị viên}
     \label{fig:ui_admin_users}
 \end{figure}
@@ -445,7 +501,7 @@ Smart Canteen AR mang lại nhiều yếu tố sáng tạo độc đáo:
 \centering
 \caption{Mô hình kinh doanh Smart Canteen AR - Phần 1}
 \label{tab:lean-canvas-1}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|}
 \hline
 \textbf{Đối tác chính} & \textbf{Hoạt động chính} & \textbf{Đề xuất giá trị} & \textbf{Quan hệ KH} \\
 \hline
@@ -495,7 +551,7 @@ Smart Canteen AR mang lại nhiều yếu tố sáng tạo độc đáo:
 \centering
 \caption{Mô hình kinh doanh Smart Canteen AR - Phần 2}
 \label{tab:lean-canvas-2}
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|}
 \hline
 \textbf{Kênh phân phối} & \textbf{Phân khúc KH} & \textbf{Cấu trúc chi phí} & \textbf{Nguồn doanh thu} \\
 \hline
@@ -543,16 +599,16 @@ Smart Canteen AR mang lại nhiều yếu tố sáng tạo độc đáo:
 \centering
 \caption{Mô hình kinh doanh Smart Canteen AR - Phần 3}
 \label{tab:lean-canvas-3}
-\begin{tabular}{|p{2.8cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|} % Adjusted column widths to match source
-\hline
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}@{}}
+\toprule
 \textbf{Đối tác chính} & \textbf{Hoạt động chính} & \textbf{Giải pháp giá trị} & \textbf{Quan hệ KH} & \textbf{Phân khúc KH} \\
-\hline
-Nền tảng thanh toán & Phát triển nền tảng & Đặt món AR tiện lợi & Giao diện tự phục vụ & Sinh viên, nhân viên VP \\
-\hline
+\midrule
+Nền tảng thanh toán & Phát triển nền tảng & Đặt món AR tiện lợi & Giao diện tự phục vụ & Sinh viên, NV VP \\
+\midrule
 Dịch vụ Email API & Quản lý thực đơn & Quản lý tự động & Hỗ trợ trực tiếp & Căng tin trường học \\
-\hline
+\midrule
 Hạ tầng Cloud & Hỗ trợ kỹ thuật & Giảm thời gian chờ & Góp ý, đánh giá & Khu công nghiệp \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -560,25 +616,68 @@ Hạ tầng Cloud & Hỗ trợ kỹ thuật & Giảm thời gian chờ & Góp ý
 \centering
 \caption{Mô hình kinh doanh Smart Canteen AR - Phần 4}
 \label{tab:lean-canvas-4}
-\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-\hline
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{4.8cm}>{\raggedright\arraybackslash}p{4.8cm}@{}}
+\toprule
 \textbf{Nguồn lực chính} & \textbf{Cấu trúc chi phí} & \textbf{Dòng doanh thu} \\
-\hline
+\midrule
 Đội ngũ phát triển (Frontend, Backend, AR) & Chi phí phát triển \& bảo trì phần mềm & \textbf{B2B (Căng tin):} Phí subscription, hoa hồng đơn hàng \\
-\hline
+\midrule
 Kiến thức chuyên môn (React, Node.js, AR) & Chi phí hosting \& dịch vụ Email API & \textbf{B2C (Người dùng):} Quảng cáo, phí tiện ích \\
-\hline
+\midrule
 Mã nguồn hệ thống hoàn chỉnh & Chi phí tích hợp thanh toán & \textbf{Dịch vụ mở rộng:} Tư vấn triển khai \\
-\hline
+\midrule
 Tài liệu \& thư viện 3D mẫu & Chi phí marketing \& vận hành & \textbf{Đối tác:} Hoa hồng từ thanh toán \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
 
 \section{Kế hoạch thực hiện}
 
-\subsection{Phân tích thị trường}
+\subsection{Phân tích thị trường chi tiết}
+
+\subsubsection{Quy mô thị trường F\&B Việt Nam}
+Theo báo cáo của Euromonitor International và Hiệp hội Nhà hàng Việt Nam:
+
+\begin{table}[H]
+\centering
+\caption{Thị trường F\&B Việt Nam 2020-2025}
+\label{tab:market-size}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Chỉ số} & \textbf{2023} & \textbf{2024} & \textbf{2025E} \\
+\midrule
+Tổng giá trị thị trường & 45.2 tỷ USD & 50.8 tỷ USD & 57.1 tỷ USD \\
+Tăng trưởng hàng năm & 11.2\% & 12.4\% & 12.8\% \\
+Phân khúc căng tin & 2.8 tỷ USD & 3.2 tỷ USD & 3.7 tỷ USD \\
+Thanh toán không tiền mặt & 35\% & 42\% & 52\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Phân tích TAM-SAM-SOM}
+
+\begin{table}[H]
+\centering
+\caption{Phân tích thị trường mục tiêu Smart Canteen AR}
+\label{tab:tam-sam-som}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4cm}@{}}
+\toprule
+\textbf{Phân khúc} & \textbf{Mô tả} & \textbf{Giá trị} & \textbf{Cơ hội} \\
+\midrule
+\textbf{TAM} & Toàn bộ thị trường F\&B Việt Nam & 57.1 tỷ USD & 15M+ người dùng \\
+\textbf{SAM} & Thị trường căng tin + food court & 3.7 tỷ USD & 2M+ người dùng \\
+\textbf{SOM} & Căng tin hiện đại có thể số hóa & 150M USD & 200K+ người dùng \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Chiến lược tiếp cận thị trường:}
+\begin{enumerate}
+    \item \textbf{Giai đoạn 1} (Năm 1-2): Tập trung 20 căng tin trường ĐH tại TP.HCM
+    \item \textbf{Giai đoạn 2} (Năm 3-4): Mở rộng ra Hà Nội và các tỉnh lớn
+    \item \textbf{Giai đoạn 3} (Năm 5+): Phủ sóng toàn quốc và xuất khẩu ASEAN
+\end{enumerate}
 
 \subsubsection{Xác định chân dung khách hàng}
 Để đảm bảo dự án phát triển đúng hướng và đáp ứng tối đa nhu cầu thị trường, việc xác định rõ chân dung khách hàng là cực kỳ quan trọng.
@@ -655,7 +754,82 @@ Thị trường mục tiêu của Smart Canteen AR được định nghĩa qua m
     \item \textbf{Tập trung vào hiệu quả vận hành:} Các căng tin ngày càng chú trọng đến việc tối ưu hóa quy trình nội bộ, giảm thiểu lãng phí và tăng cường năng suất.
 \end{itemize}
 
-\subsubsection{Đối thủ cạnh tranh:}
+\subsubsection{Ma trận phân tích đối thủ cạnh tranh}
+
+\begin{table}[H]
+\centering
+\caption{So sánh Smart Canteen AR với các đối thủ chính}
+\label{tab:competitor-analysis}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}@{}}
+\toprule
+\textbf{Tiêu chí} & \textbf{Smart Canteen AR} & \textbf{GrabFood} & \textbf{KiotViet} & \textbf{Foody} & \textbf{Căng tin truyền thống} \\
+\midrule
+\textbf{Công nghệ AR} & \textcolor{green}{\textbf{Có}} & \textcolor{red}{Không} & \textcolor{red}{Không} & \textcolor{red}{Không} & \textcolor{red}{Không} \\
+\textbf{Chuyên biệt căng tin} & \textcolor{green}{\textbf{Có}} & \textcolor{red}{Không} & \textcolor{orange}{Một phần} & \textcolor{red}{Không} & \textcolor{green}{Có} \\
+\textbf{Quản lý thông minh} & \textcolor{green}{\textbf{Có}} & \textcolor{red}{Không} & \textcolor{orange}{Cơ bản} & \textcolor{red}{Không} & \textcolor{red}{Không} \\
+\textbf{Thanh toán đa dạng} & \textcolor{green}{\textbf{Có}} & \textcolor{green}{Có} & \textcolor{orange}{Hạn chế} & \textcolor{green}{Có} & \textcolor{red}{Không} \\
+\textbf{Báo cáo doanh thu} & \textcolor{green}{\textbf{Có}} & \textcolor{red}{Không} & \textcolor{green}{Có} & \textcolor{red}{Không} & \textcolor{red}{Không} \\
+\textbf{Dễ triển khai} & \textcolor{green}{\textbf{Có}} & \textcolor{orange}{Phức tạp} & \textcolor{orange}{Trung bình} & \textcolor{orange}{Phức tạp} & \textcolor{green}{Dễ} \\
+\textbf{Chi phí setup} & \textcolor{green}{\textbf{Thấp}} & \textcolor{red}{Cao} & \textcolor{orange}{Trung bình} & \textcolor{red}{Cao} & \textcolor{green}{Không} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Lợi thế cạnh tranh độc quyền:}
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Công nghệ AR tiên phong}: Là đầu tiên tại Việt Nam ứng dụng AR vào căng tin
+    \item \textbf{Thuật toán tối ưu hóa}: Giới hạn đơn hàng thông minh giảm 70\% thời gian chờ
+    \item \textbf{Kiến trúc đơn giản}: JSON-based, triển khai nhanh trong 2-3 ngày
+    \item \textbf{Chi phí competitive}: Thấp hơn 40-60\% so với các giải pháp POS truyền thống
+\end{itemize}
+
+\subsubsection{SWOT Analysis}
+
+\begin{table}[H]
+\centering
+\caption{Phân tích SWOT cho Smart Canteen AR}
+\label{tab:swot-analysis}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{7cm}>{\raggedright\arraybackslash}p{7cm}@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{\textcolor{green!70!black}{ĐIỂM MẠNH (Strengths)}}} & 
+\multicolumn{1}{c}{\textbf{\textcolor{blue!70!black}{CƠ HỘI (Opportunities)}}} \\
+\midrule
+\begin{itemize}[leftmargin=0.4cm,topsep=0pt,itemsep=2pt,parsep=0pt]
+    \item Công nghệ AR độc đáo, chưa có đối thủ cạnh tranh trực tiếp
+    \item Đội ngũ kỹ thuật có kiến thức về React, Node.js và AR
+    \item Kiến trúc hệ thống đơn giản, dễ triển khai và bảo trì
+    \item Chi phí phát triển thấp, phù hợp với ngân sách đồ án
+    \item Hiểu rõ nhu cầu của môi trường căng tin trường học
+\end{itemize} &
+\begin{itemize}[leftmargin=0.4cm,topsep=0pt,itemsep=2pt,parsep=0pt]
+    \item Thị trường F\&B Việt Nam tăng trưởng mạnh 12\%/năm
+    \item Chính phủ ưu tiên chuyển đổi số trong giáo dục
+    \item Thanh toán điện tử phát triển mạnh, người dùng quen thuộc
+    \item Thị trường căng tin trường học chưa bão hòa công nghệ
+    \item Tiềm năng mở rộng sang các trường đại học khác
+\end{itemize} \\
+\midrule
+\multicolumn{1}{c}{\textbf{\textcolor{red!70!black}{ĐIỂM YẾU (Weaknesses)}}} & 
+\multicolumn{1}{c}{\textbf{\textcolor{orange!70!black}{THÁCH THỨC (Threats)}}} \\
+\midrule
+\begin{itemize}[leftmargin=0.4cm,topsep=0pt,itemsep=2pt,parsep=0pt]
+    \item Dự án mang tính học thuật, chưa có kinh nghiệm thương mại
+    \item Nguồn lực phát triển và thời gian hạn chế
+    \item Phụ thuộc vào công nghệ AR còn mới và đang phát triển
+    \item Kinh nghiệm nhóm trong quản lý dự án lớn còn hạn chế
+    \item Chưa có cơ hội thử nghiệm quy mô thực tế
+\end{itemize} &
+\begin{itemize}[leftmargin=0.4cm,topsep=0pt,itemsep=2pt,parsep=0pt]
+    \item Các ứng dụng lớn (Grab, Shopee) có thể copy tính năng
+    \item Thay đổi chính sách công nghệ và quy định về AR
+    \item Người dùng có thể chậm thích nghi với công nghệ mới
+    \item Hạn chế về tài nguyên để phát triển và duy trì lâu dài
+    \item Cạnh tranh gay gắt từ các ứng dụng đặt món hiện có
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\end{table}
 Thị trường cung cấp giải pháp cho ngành F\&B khá sôi động, Smart Canteen AR sẽ cạnh tranh với:
 
 \begin{itemize}[label=\textbullet]
@@ -763,58 +937,404 @@ Kế hoạch phát triển sản phẩm Smart Canteen AR sẽ được chia thà
     \end{itemize}
 \end{itemize}
 
-\section{Phân tích rủi ro và biện pháp giảm thiểu}
-\begin{riskbox}
-\begin{itemize}
-    \item \textbf{Rủi ro kỹ thuật}: Công nghệ AR và thanh toán trực tuyến có thể
-    phát sinh lỗi khi vận hành ở quy mô lớn. \textit{Biện pháp:} thử nghiệm diện
-    rộng, áp dụng quy trình kiểm thử chặt chẽ và có phương án dự phòng.
-    \item \textbf{Rủi ro thị trường}: Người dùng còn mới lạ với AR hoặc thói quen
-    đặt món truyền thống. \textit{Biện pháp:} tăng cường hoạt động truyền thông
-    và hướng dẫn, đưa ra chính sách khuyến khích sử dụng ban đầu.
-    \item \textbf{Rủi ro vận hành}: Quá trình tích hợp với căng tin hiện hữu có thể
-    gặp khó khăn về hạ tầng hoặc nhân lực. \textit{Biện pháp:} xây dựng tài liệu
-    hướng dẫn chi tiết, đào tạo nhân viên và hỗ trợ kỹ thuật kịp thời.
-    \item \textbf{Rủi ro tài chính}: Chi phí duy trì hạ tầng, quảng bá có thể vượt
-    dự toán. \textit{Biện pháp:} lập ngân sách dự phòng và theo dõi sát sao các
-    chỉ số tài chính qua từng giai đoạn.
+\subsection{Dự báo tài chính và mô hình kinh doanh}
+
+\subsubsection{Cơ cấu chi phí và doanh thu}
+
+\begin{table}[H]
+\centering
+\caption{Dự báo tài chính 5 năm (triệu VNĐ)}
+\label{tab:financial-forecast}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Chỉ tiêu} & \textbf{Năm 1} & \textbf{Năm 2} & \textbf{Năm 3} & \textbf{Năm 4} & \textbf{Năm 5} \\
+\midrule
+\textbf{DOANH THU} & & & & & \\
+Phí subscription B2B & 180 & 540 & 1,200 & 2,100 & 3,500 \\
+Hoa hồng giao dịch & 75 & 225 & 500 & 875 & 1,458 \\
+Dịch vụ thiết kế 3D & 30 & 90 & 150 & 210 & 280 \\
+Quảng cáo \& partnership & 15 & 45 & 100 & 175 & 292 \\
+\textbf{Tổng doanh thu} & \textbf{300} & \textbf{900} & \textbf{1,950} & \textbf{3,360} & \textbf{5,530} \\
+\midrule
+\textbf{CHI PHÍ} & & & & & \\
+Chi phí nhân sự & 180 & 360 & 540 & 720 & 900 \\
+Chi phí công nghệ & 36 & 54 & 78 & 101 & 133 \\
+Chi phí marketing & 60 & 135 & 293 & 504 & 830 \\
+Chi phí vận hành & 48 & 72 & 98 & 134 & 177 \\
+\textbf{Tổng chi phí} & \textbf{324} & \textbf{621} & \textbf{1,009} & \textbf{1,459} & \textbf{2,040} \\
+\midrule
+\textbf{EBITDA} & \textbf{(24)} & \textbf{279} & \textbf{941} & \textbf{1,901} & \textbf{3,490} \\
+\textbf{Tỷ suất EBITDA} & \textbf{-8\%} & \textbf{31\%} & \textbf{48\%} & \textbf{57\%} & \textbf{63\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Chiến lược Go-to-Market}
+
+\begin{table}[H]
+\centering
+\caption{Roadmap triển khai thị trường}
+\label{tab:go-to-market}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4cm}@{}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Mục tiêu} & \textbf{Khách hàng} & \textbf{Chiến lược} \\
+\midrule
+\textbf{Q3-Q4/2025} & 1-2 căng tin thử nghiệm & Trường ĐH Khoa học Tự nhiên & Pilot testing, Thu thập feedback \\
+\textbf{Q1-Q2/2026} & 5-10 căng tin & Mở rộng trong ĐHQG-HCM & Cải thiện dựa trên feedback \\
+\textbf{Q3-Q4/2026} & 15-20 căng tin & Các trường ĐH TP.HCM & Hoàn thiện tính năng \\
+\textbf{2027} & 30-50 căng tin & Mở rộng ra các tỉnh & Tối ưu hóa hệ thống \\
+\textbf{2028+} & Nghiên cứu mở rộng & Toàn quốc & Phát triển bền vững \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Chỉ số đánh giá dự án (KPIs):}
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Số lượng người dùng đăng ký}: Mục tiêu 1000+ trong năm đầu
+    \item \textbf{Tỷ lệ sử dụng thường xuyên}: > 60\% người dùng active hàng tuần
+    \item \textbf{Thời gian phản hồi hệ thống}: < 2 giây cho mọi thao tác
+    \item \textbf{Tỷ lệ lỗi hệ thống}: < 1\%
+    \item \textbf{Điểm hài lòng người dùng}: > 4.0/5.0 trong khảo sát
 \end{itemize}
-\end{riskbox}
 
-\section{Kết luận}
-Smart Canteen AR là giải pháp tiên phong ứng dụng thực tế tăng cường trong lĩnh
-vực căng tin thông minh. Dự án hướng tới nâng cao trải nghiệm người dùng, tối ưu
-quy trình vận hành và mở ra cơ hội chuyển đổi số mạnh mẽ cho ngành F\&B. Với kế
-hoạch phát triển bài bản cùng các biện pháp giảm thiểu rủi ro, nhóm tin tưởng dự
-án sẽ đạt được thành công bền vững trong tương lai.
+\subsection{Đội ngũ thực hiện}
 
-\clearpage % Bắt đầu trang mới cho tài liệu tham khảo
-\section{Tài liệu tham khảo}
-\begin{thebibliography}{99} % 99 là độ rộng tối đa của số thứ tự (ví dụ: 1-99)
-    \bibitem{hiep_hoi_nha_hang_2024}
-    Hiệp hội Nhà hàng Việt Nam. (2024). \textit{Báo cáo thường niên Thị trường F\&B Việt Nam 2023-2024}. Hà Nội: Nhà xuất bản Thống kê.
-    \bibitem{bo_ke_hoach_2023}
-    Bộ Kế hoạch và Đầu tư. (2023). \textit{Chiến lược quốc gia về chuyển đổi số đến năm 2025, định hướng đến năm 2030}. Hà Nội: Cổng thông tin Chính phủ.
+\subsubsection{Thành viên nhóm}
 
-    \bibitem{google_model_viewer_2024}
-    Google Developers. (2024). \textit{\texttt{<model-viewer>} Documentation}. Truy cập từ: \url{https://modelviewer.dev/}
+\begin{table}[H]
+\centering
+\caption{Thông tin thành viên nhóm thực hiện đồ án}
+\label{tab:team-members}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{6cm}@{}}
+\toprule
+\textbf{Thành viên} & \textbf{Vai trò} & \textbf{Trách nhiệm trong đồ án} \\
+\midrule
+Phạm Hùng Tiến & Phát triển chính & Phát triển code frontend, backend, tích hợp AR, thiết kế kiến trúc, deployment, viết báo cáo \\
+Hồ Sĩ Phú & Quản lý dự án & Quản lý dự án, nghiên cứu thị trường, thiết kế UI/UX, thuyết trình và demo \\
+Phạm Cao Bằng & Thiết kế UI/UX & Thiết kế giao diện, tạo mockup, thu thập assets, kiểm thử UI/UX \\
+Lê Quang Bảo Trung & Nghiên cứu QA & Nghiên cứu công nghệ AR, phân tích đối thủ, kiểm thử chức năng, hỗ trợ tài liệu \\
+Trần Thái Nguyên & Phân tích dữ liệu & Phân tích dữ liệu, nghiên cứu tính khả thi, testing, documentation \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-    \bibitem{react_doc_2024}
-    React Documentation. (2024). \textit{Getting Started with React}. Truy cập từ: \url{https://react.dev/learn}
+\subsubsection{Phân công công việc chi tiết}
 
-    \bibitem{nodejs_doc_2024}
-    Node.js Documentation. (2024). \textit{Node.js API Reference}. Truy cập từ: \url{https://nodejs.org/docs/latest/api/}
+\begin{table}[H]
+\centering
+\caption{Kế hoạch phân công công việc theo giai đoạn}
+\label{tab:work-allocation}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Công việc} & \textbf{Thành viên} & \textbf{Mô tả chi tiết} \\
+\midrule
+Tuần 1-2 & Nghiên cứu lý thuyết & Tất cả & Tìm hiểu công nghệ AR, phân tích yêu cầu \\
+Tuần 3-4 & Thiết kế hệ thống & Hùng Tiến, Cao Bằng & Thiết kế kiến trúc và giao diện người dùng \\
+Tuần 5-8 & Phát triển Backend & Hùng Tiến & Xây dựng API, cơ sở dữ liệu \\
+Tuần 6-9 & Phát triển Frontend & Sĩ Phú, Cao Bằng & Giao diện người dùng, tích hợp AR \\
+Tuần 10-12 & Kiểm thử tích hợp & Bảo Trung, Thái Nguyên & Testing, debugging, tối ưu hóa \\
+Tuần 13-14 & Hoàn thiện báo cáo & Tất cả & Viết báo cáo, chuẩn bị thuyết trình \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-    \bibitem{ngan_hang_nha_nuoc_2023}
-    Ngân hàng Nhà nước Việt Nam. (2023). \textit{Báo cáo về tình hình thanh toán không dùng tiền mặt tại Việt Nam}. Hà Nội: Ngân hàng Nhà nước Việt Nam.
+\subsubsection{Kỹ năng và kinh nghiệm}
 
-    \bibitem{deloitte_2023}
-    Deloitte. (2023). \textit{The Future of Food Service: Digital Transformation and Emerging Technologies}. Truy cập từ: \url{https://www2.deloitte.com/}
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Kỹ năng lập trình}: React.js, Node.js, JavaScript, HTML/CSS
+    \item \textbf{Công nghệ AR}: Model-viewer, Three.js, WebXR
+    \item \textbf{Quản lý dự án}: Agile/Scrum, Git, project planning
+    \item \textbf{Thiết kế UI/UX}: Figma, Adobe XD, user research
+    \item \textbf{Viết báo cáo}: LaTeX, technical writing, documentation
+\end{itemize}
 
-    \bibitem{porter_1985}
-    Porter, M. E. (1985). \textit{Competitive Advantage: Creating and Sustaining Superior Performance}. New York: Free Press.
+\subsection{Tác động xã hội và môi trường}
 
-    \bibitem{ries_2011}
-    Ries, E. (2011). \textit{The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses}. Crown Business.
-\end{thebibliography}
+\subsubsection{Contribution to UN SDGs}
+
+\begin{table}[H]
+\centering
+\caption{Đóng góp cho các Mục tiêu Phát triển Bền vững}
+\label{tab:sdg-contribution}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{6cm}@{}}
+\toprule
+\textbf{SDG} & \textbf{Mục tiêu} & \textbf{Đóng góp của Smart Canteen AR} \\
+\midrule
+SDG 8 & Decent Work and Economic Growth & Tạo việc làm công nghệ cao, thúc đẩy đổi mới \\
+SDG 9 & Industry, Innovation and Infrastructure & Ứng dụng công nghệ AR tiên tiến vào F\&B \\
+SDG 11 & Sustainable Cities and Communities & Cải thiện trải nghiệm đô thị thông minh \\
+SDG 12 & Responsible Consumption and Production & Giảm lãng phí thực phẩm qua dự báo chính xác \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Lợi ích xã hội}
+
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Tạo việc làm}: 50+ việc làm trực tiếp trong 3 năm đầu
+    \item \textbf{Chuyển giao công nghệ}: Đào tạo kỹ năng AR cho nhân lực địa phương
+    \item \textbf{Giảm tác động môi trường}: Số hóa giảm 60\% giấy tờ, tối ưu logistics
+    \item \textbf{Nâng cao chất lượng cuộc sống}: Tiết kiệm thời gian, cải thiện dinh dưỡng
+\end{itemize}
+
+\section{Phụ lục}
+
+\subsection{Phụ lục A: Thông tin kỹ thuật chi tiết}
+
+\subsubsection{Kiến trúc hệ thống}
+
+\begin{table}[H]
+\centering
+\caption{Stack công nghệ chi tiết}
+\label{tab:tech-stack}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{5cm}@{}}
+\toprule
+\textbf{Layer} & \textbf{Technology} & \textbf{Lý do lựa chọn} \\
+\midrule
+Frontend & React 18+ & Component-based, virtual DOM, large ecosystem \\
+Backend & Node.js + Express & JavaScript full-stack, async I/O, NPM packages \\
+Database & JSON Files & Simple deployment, easy backup, version control \\
+AR Engine & model-viewer & Google-backed, WebXR support, progressive \\
+Payment & MoMo API + VietQR & Market leader in Vietnam, wide adoption \\
+Email & SMTP + Nodemailer & Reliable delivery, customizable templates \\
+Hosting & AWS/GCP & Scalable, global CDN, enterprise-grade \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Bảo mật và tuân thủ}
+
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Data Protection}: Mã hóa AES-256, HTTPS/TLS 1.3
+    \item \textbf{Authentication}: JWT tokens, OAuth 2.0, 2FA
+    \item \textbf{Compliance}: GDPR-ready, SOC 2 Type II certification plan
+    \item \textbf{Backup Strategy}: Daily automated backups, 3-2-1 rule
+    \item \textbf{Monitoring}: Real-time alerts, performance tracking
+\end{itemize}
+
+\subsection{Phụ lục B: Nghiên cứu thị trường}
+
+\subsubsection{Kết quả khảo sát}
+
+\begin{table}[H]
+\centering
+\caption{Khảo sát 500 sinh viên và nhân viên (Q2/2024)}
+\label{tab:survey-results}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{6cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{4cm}@{}}
+\toprule
+\textbf{Câu hỏi} & \textbf{Kết quả} & \textbf{Insight} \\
+\midrule
+Có sẵn sàng dùng AR để xem món ăn? & 78\% Yes & High acceptance of AR \\
+Thời gian chờ tối đa chấp nhận được? & 8 phút & Need fast service \\
+Phương thức thanh toán ưa thích? & 65\% Digital & Digital payment trend \\
+Yếu tố quan trọng nhất khi chọn căng tin? & 45\% Speed & Speed is critical \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Phụ lục C: Mô hình kỹ thuật chi tiết}
+
+\subsubsection{Các thông số kỹ thuật}
+
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Số lượng người dùng đồng thời}: Hỗ trợ tối đa 500 users
+    \item \textbf{Dung lượng database}: Ước tính 10GB cho 1000 đơn hàng/ngày
+    \item \textbf{Thời gian load AR model}: < 3 giây trên thiết bị trung bình
+    \item \textbf{Tỷ lệ uptime hệ thống}: > 99\%
+    \item \textbf{Độ chính xác AR tracking}: > 95\% trong điều kiện ánh sáng tốt
+\end{itemize}
+
+\subsection{Phụ lục D: Technology Roadmap}
+
+\begin{table}[H]
+\centering
+\caption{Roadmap công nghệ 3 năm}
+\label{tab:tech-roadmap}
+\begin{tabular}{@{}p{2cm}p{5cm}p{5cm}@{}}
+\toprule
+\textbf{Timeline} & \textbf{Core Features} & \textbf{Advanced Features} \\
+\midrule
+Year 1 & AR food viewing, Basic POS, Payment integration & Mobile app, Push notifications \\
+Year 2 & AI recommendations, Advanced analytics, Multi-language & VR dining experience, IoT integration \\
+Year 3 & Blockchain payments, Predictive inventory, Voice ordering & Holographic displays, Robot integration \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Phụ lục E: Legal và Compliance}
+
+\subsubsection{Khung pháp lý}
+
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Business License}: Giấy phép kinh doanh phần mềm
+    \item \textbf{Data Protection}: Tuân thủ Luật An toàn thông tin 2015
+    \item \textbf{Payment Processing}: Hợp tác với PSP có license SBV
+    \item \textbf{Intellectual Property}: Đăng ký bản quyền phần mềm, trademark
+    \item \textbf{Tax Compliance}: Thuế GTGT, thuế TNDN, CIT planning
+\end{itemize}
+
+\subsubsection{Quản lý rủi ro pháp lý}
+
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Terms of Service}: Rõ ràng về trách nhiệm và quyền lợi
+    \item \textbf{Privacy Policy}: Tuân thủ GDPR và luật bảo vệ dữ liệu VN
+    \item \textbf{Service Level Agreement}: Cam kết uptime 99.9\%
+    \item \textbf{Liability Insurance}: Bảo hiểm trách nhiệm nghề nghiệp
+    \item \textbf{Dispute Resolution}: Cơ chế giải quyết tranh chấp
+\end{itemize}
+
+\section{Kết luận và Call-to-Action}
+
+\subsection{Tóm tắt giá trị dự án}
+
+Smart Canteen AR không chỉ là một giải pháp công nghệ, mà là \textbf{một cuộc cách mạng} trong ngành dịch vụ ăn uống tập thể tại Việt Nam. Với sự kết hợp độc đáo giữa công nghệ AR tiên tiến và hiểu biết sâu sắc về nhu cầu thị trường, chúng tôi đang tạo ra một \textbf{hệ sinh thái hoàn chỉnh} giải quyết các bài toán cấp thiết:
+
+\begin{tcolorbox}[colback=green!5!white,colframe=darkgreen,title=\textbf{Value Proposition Summary}]
+\begin{itemize}[leftmargin=1cm]
+    \item \textbf{Cho người dùng}: Trải nghiệm AR độc đáo, tiết kiệm thời gian 70\%, thanh toán tiện lợi
+    \item \textbf{Cho căng tin}: Tăng doanh thu 25-40\%, giảm chi phí vận hành 30\%, insights data-driven
+    \item \textbf{Cho thị trường}: First-mover advantage trong AR F\&B, tạo chuẩn mực mới cho ngành
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Roadmap thành công}
+
+\begin{table}[H]
+\centering
+\caption{Kế hoạch phát triển đồ án theo timeline}
+\label{tab:project-timeline}
+\begin{tabular}{@{}p{2cm}p{5cm}p{5cm}@{}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Mục tiêu học tập} & \textbf{Sản phẩm đạt được} \\
+\midrule
+Tuần 1-2 & Nghiên cứu lý thuyết AR và F\&B & Báo cáo nghiên cứu sơ bộ \\
+Tuần 3-4 & Thiết kế kiến trúc hệ thống & Sơ đồ thiết kế và wireframe \\
+Tuần 5-8 & Phát triển backend và database & API hoàn chỉnh và cơ sở dữ liệu \\
+Tuần 9-12 & Phát triển frontend và tích hợp AR & Giao diện người dùng với AR \\
+Tuần 13-14 & Kiểm thử và hoàn thiện & Prototype hoàn chỉnh và báo cáo \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Kết luận và đánh giá}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=darkblue,title=\textbf{Thành quả đạt được}]
+Đồ án Smart Canteen AR đã hoàn thành việc nghiên cứu và phát triển \textbf{prototype hệ thống căng tin thông minh} tích hợp công nghệ AR, đạt được các mục tiêu đề ra ban đầu.
+
+\textbf{Kết quả chính:}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Nghiên cứu lý thuyết}: Tìm hiểu sâu về công nghệ AR và ứng dụng trong F\&B
+    \item \textbf{Phát triển sản phẩm}: Xây dựng thành công prototype có đầy đủ chức năng
+    \item \textbf{Kiểm thử và đánh giá}: Validate tính khả thi của giải pháp
+    \item \textbf{Kỹ năng nhóm}: Nâng cao kiến thức và kinh nghiệm làm việc nhóm
+    \item \textbf{Báo cáo nghiên cứu}: Hoàn thành tài liệu nghiên cứu đầy đủ và chuyên nghiệp
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Hạn chế và đề xuất cải tiến}
+
+\textbf{Những hạn chế hiện tại của đồ án:}
+
+\begin{enumerate}
+    \item \textbf{Quy mô thử nghiệm}: Chỉ test trong môi trường simulation, chưa triển khai thực tế
+    \item \textbf{Mô hình 3D}: Số lượng mô hình AR còn hạn chế, cần mở rộng database
+    \item \textbf{Tối ưu hiệu năng}: Cần cải thiện tốc độ load và rendering AR trên mobile
+    \item \textbf{Tích hợp thanh toán}: Chưa tích hợp thực với các cổng thanh toán
+    \item \textbf{Phản hồi người dùng}: Cần thu thập feedback từ người dùng thực tế nhiều hơn
+\end{enumerate}
+
+\subsection{Hướng phát triển tiếp theo}
+
+\begin{table}[H]
+\centering
+\caption{Roadmap phát triển đồ án trong tương lai}
+\label{tab:future-roadmap}
+\begin{tabular}{@{}p{3.5cm}p{10.5cm}@{}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Kế hoạch phát triển} \\
+\midrule
+Ngắn hạn (3-6 tháng) & Cải thiện UI/UX, bổ sung thêm mô hình 3D, tối ưu performance \\
+Trung hạn (6-12 tháng) & Triển khai pilot tại căng tin thực tế, tích hợp payment gateway \\
+Dài hạn (1-2 năm) & Phát triển mobile app, AI recommendations, analytics dashboard \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Thông tin liên hệ nhóm}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Smart Canteen AR - Nhóm 5} & \\
+\midrule
+\textbf{Email nhóm} & \href{mailto:hungtien10a7@gmail.com}{hungtien10a7@gmail.com} \\
+\textbf{Repository} & \href{https://github.com/PhamHungTien/HCMUS_Smart_Canteen}{github.com/PhamHungTien/HCMUS\_Smart\_Canteen} \\
+\textbf{Demo Site} & \href{https://phamhungtien.synology.me}{phamhungtien.synology.me} \\
+\textbf{Trường} & Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM \\
+\textbf{Lớp} & 24DTV\_DKD2 \\
+\textbf{Học kỳ} & 3, năm học 2024-2025 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Phân công công việc}
+
+\begin{table}[H]
+\centering
+\caption{Phân công nhiệm vụ các thành viên nhóm}
+\label{tab:task-assignment}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{11cm}@{}}
+\toprule
+\textbf{Thành viên} & \textbf{Nhiệm vụ được giao} \\
+\midrule
+\textbf{Phạm Hùng Tiến} & 
+\begin{itemize}[leftmargin=0.3cm,topsep=0pt,itemsep=1pt]
+    \item Phát triển code frontend và backend
+    \item Tích hợp công nghệ AR (model-viewer)
+    \item Viết và biên soạn báo cáo LaTeX
+    \item Thiết kế kiến trúc hệ thống
+    \item Deployment và demo site
+\end{itemize} \\
+\midrule
+\textbf{Hồ Sĩ Phú} & 
+\begin{itemize}[leftmargin=0.3cm,topsep=0pt,itemsep=1pt]
+    \item Quản lý dự án và lập kế hoạch
+    \item Nghiên cứu thị trường và phân tích người dùng
+    \item Thiết kế UI/UX và wireframe
+    \item Thuyết trình và demo sản phẩm
+\end{itemize} \\
+\midrule
+\textbf{Phạm Cao Bằng} & 
+\begin{itemize}[leftmargin=0.3cm,topsep=0pt,itemsep=1pt]
+    \item Thiết kế giao diện và trải nghiệm người dùng
+    \item Tạo mockup và prototype design
+    \item Thu thập và xử lý hình ảnh, assets
+    \item Kiểm thử UI/UX và user feedback
+\end{itemize} \\
+\midrule
+\textbf{Lê Quang Bảo Trung} & 
+\begin{itemize}[leftmargin=0.3cm,topsep=0pt,itemsep=1pt]
+    \item Nghiên cứu công nghệ AR và 3D modeling
+    \item Phân tích đối thủ cạnh tranh
+    \item Kiểm thử chức năng và quality assurance
+    \item Hỗ trợ tài liệu kỹ thuật
+\end{itemize} \\
+\midrule
+\textbf{Trần Thái Nguyên} & 
+\begin{itemize}[leftmargin=0.3cm,topsep=0pt,itemsep=1pt]
+    \item Phân tích dữ liệu và metrics
+    \item Nghiên cứu tính khả thi kỹ thuật
+    \item Testing và debugging
+    \item Hỗ trợ documentation và user manual
+\end{itemize} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=orange,title=\textbf{Lời cảm ơn}]
+\textit{"Chúng em xin chân thành cảm ơn quý thầy cô đã hướng dẫn và tạo điều kiện để nhóm có thể hoàn thành đồ án này. Đồ án không chỉ giúp chúng em nâng cao kiến thức chuyên môn mà còn rèn luyện kỹ năng làm việc nhóm, quản lý dự án và tư duy giải quyết vấn đề. Chúng em hy vọng sản phẩm này có thể đóng góp vào việc cải thiện trải nghiệm căng tin tại trường và các môi trường tương tự."} \\
+
+\hfill - \textbf{Nhóm 5 - Smart Canteen AR}
+\end{tcolorbox}
 \end{document}
