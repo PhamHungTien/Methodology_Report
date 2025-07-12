@@ -1,0 +1,8 @@
+# Build artifacts
+build/
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.pdf
