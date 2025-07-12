@@ -30,9 +30,11 @@
 % --- Gói cho header/footer ---
 \usepackage{fancyhdr}       % Tùy chỉnh header và footer
 
-% --- Gói cho màu sắc ---
+% --- Gói cho màu sắc và đồ họa ---
 \usepackage{xcolor}         % Định nghĩa và sử dụng màu sắc
 \usepackage[most]{tcolorbox} % Tạo khung màu chuyên nghiệp
+\usepackage{tikz}           % Vẽ hình và trang trí
+\usetikzlibrary{calc}       % Thư viện hỗ trợ tính toán vị trí
 \definecolor{darkblue}{RGB}{0,82,155}   % Màu xanh đậm cho tiêu đề
 \definecolor{darkgreen}{RGB}{0,128,0}   % Màu xanh lá đậm cho URL
 
@@ -115,6 +117,12 @@
 % --- Trang tiêu đề ---
 \begin{titlepage}
     \thispagestyle{empty} % Xóa header/footer cho trang tiêu đề
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[color=darkblue,line width=2pt]
+            ($(current page.north west)+(0.75cm,-0.75cm)$)
+            rectangle
+            ($(current page.south east)+(-0.75cm,0.75cm)$);
+    \end{tikzpicture}
     \centering           % Căn giữa nội dung trang bìa
 
     % Có thể thêm logo nếu có (ví dụ: \includegraphics[width=4cm]{../images/logo.png}\\[1cm])
