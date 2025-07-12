@@ -1150,7 +1150,7 @@ Yếu tố quan trọng nhất khi chọn căng tin? & 45\% Speed & Speed is cri
 \centering
 \caption{Roadmap công nghệ 3 năm}
 \label{tab:tech-roadmap}
-\begin{tabular}{@{}p{2cm}p{5cm}p{5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{5cm}@{}}
 \toprule
 \textbf{Timeline} & \textbf{Core Features} & \textbf{Advanced Features} \\
 \midrule
@@ -1161,49 +1161,49 @@ Year 3 & Blockchain payments, Predictive inventory, Voice ordering & Holographic
 \end{tabular}
 \end{table}
 
-\subsection{Phụ lục E: Legal và Compliance}
+\subsection{Phụ lục E: Khía cạnh bảo mật và tuân thủ}
 
-\subsubsection{Khung pháp lý}
+\subsubsection{Bảo mật dữ liệu}
 
 \begin{itemize}[leftmargin=1cm]
-    \item \textbf{Business License}: Giấy phép kinh doanh phần mềm
-    \item \textbf{Data Protection}: Tuân thủ Luật An toàn thông tin 2015
-    \item \textbf{Payment Processing}: Hợp tác với PSP có license SBV
-    \item \textbf{Intellectual Property}: Đăng ký bản quyền phần mềm, trademark
-    \item \textbf{Tax Compliance}: Thuế GTGT, thuế TNDN, CIT planning
+    \item \textbf{Authentication}: Sử dụng JWT tokens và bcrypt để mã hóa mật khẩu
+    \item \textbf{Data Encryption}: Mã hóa dữ liệu nhạy cảm trước khi lưu trữ
+    \item \textbf{Input Validation}: Kiểm tra và làm sạch tất cả input từ người dùng
+    \item \textbf{API Security}: Rate limiting, CORS configuration, và input sanitization
+    \item \textbf{Database Security}: Sử dụng prepared statements để tránh SQL injection
 \end{itemize}
 
-\subsubsection{Quản lý rủi ro pháp lý}
+\subsubsection{Cân nhắc về tuân thủ}
 
 \begin{itemize}[leftmargin=1cm]
-    \item \textbf{Terms of Service}: Rõ ràng về trách nhiệm và quyền lợi
-    \item \textbf{Privacy Policy}: Tuân thủ GDPR và luật bảo vệ dữ liệu VN
-    \item \textbf{Service Level Agreement}: Cam kết uptime 99.9\%
-    \item \textbf{Liability Insurance}: Bảo hiểm trách nhiệm nghề nghiệp
-    \item \textbf{Dispute Resolution}: Cơ chế giải quyết tranh chấp
+    \item \textbf{Privacy Protection}: Bảo vệ thông tin cá nhân người dùng theo GDPR
+    \item \textbf{Data Storage}: Chính sách lưu trữ và xóa dữ liệu phù hợp
+    \item \textbf{User Consent}: Xin phép người dùng trước khi thu thập dữ liệu
+    \item \textbf{Accessibility}: Đảm bảo giao diện thân thiện với người khuyết tật
+    \item \textbf{Performance}: Tối ưu hóa để hoạt động trên các thiết bị khác nhau
 \end{itemize}
 
-\section{Kết luận và Call-to-Action}
+\section{Kết luận và đánh giá đồ án}
 
-\subsection{Tóm tắt giá trị dự án}
+\subsection{Tóm tắt thành quả đạt được}
 
-Smart Canteen AR không chỉ là một giải pháp công nghệ, mà là \textbf{một cuộc cách mạng} trong ngành dịch vụ ăn uống tập thể tại Việt Nam. Với sự kết hợp độc đáo giữa công nghệ AR tiên tiến và hiểu biết sâu sắc về nhu cầu thị trường, chúng tôi đang tạo ra một \textbf{hệ sinh thái hoàn chỉnh} giải quyết các bài toán cấp thiết:
+Smart Canteen AR là một dự án nghiên cứu và phát triển \textbf{hệ thống căng tin thông minh} ứng dụng công nghệ Augmented Reality (AR) nhằm cải thiện trải nghiệm người dùng trong môi trường ăn uống tập thể. Đồ án đã hoàn thành việc nghiên cứu, thiết kế và phát triển một prototype hoạt động với các tính năng cốt lõi:
 
-\begin{tcolorbox}[colback=green!5!white,colframe=darkgreen,title=\textbf{Value Proposition Summary}]
+\begin{tcolorbox}[colback=green!5!white,colframe=darkgreen,title=\textbf{Kết quả nghiên cứu chính}]
 \begin{itemize}[leftmargin=1cm]
-    \item \textbf{Cho người dùng}: Trải nghiệm AR độc đáo, tiết kiệm thời gian 70\%, thanh toán tiện lợi
-    \item \textbf{Cho căng tin}: Tăng doanh thu 25-40\%, giảm chi phí vận hành 30\%, insights data-driven
-    \item \textbf{Cho thị trường}: First-mover advantage trong AR F\&B, tạo chuẩn mực mới cho ngành
+    \item \textbf{Mặt kỹ thuật}: Tích hợp thành công công nghệ AR vào hệ thống web, xây dựng API hoàn chỉnh
+    \item \textbf{Mặt nghiên cứu}: Phân tích sâu về nhu cầu thực tế và tính khả thi của giải pháp
+    \item \textbf{Mặt ứng dụng}: Prototype hoạt động tốt, demo được các tính năng cốt lõi
 \end{itemize}
 \end{tcolorbox}
 
-\subsection{Roadmap thành công}
+\subsection{Timeline thực hiện đồ án}
 
 \begin{table}[H]
 \centering
 \caption{Kế hoạch phát triển đồ án theo timeline}
 \label{tab:project-timeline}
-\begin{tabular}{@{}p{2cm}p{5cm}p{5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{5cm}>{\raggedright\arraybackslash}p{5cm}@{}}
 \toprule
 \textbf{Giai đoạn} & \textbf{Mục tiêu học tập} & \textbf{Sản phẩm đạt được} \\
 \midrule
@@ -1249,7 +1249,7 @@ Tuần 13-14 & Kiểm thử và hoàn thiện & Prototype hoàn chỉnh và báo
 \centering
 \caption{Roadmap phát triển đồ án trong tương lai}
 \label{tab:future-roadmap}
-\begin{tabular}{@{}p{3.5cm}p{10.5cm}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{10.5cm}@{}}
 \toprule
 \textbf{Giai đoạn} & \textbf{Kế hoạch phát triển} \\
 \midrule
@@ -1264,7 +1264,7 @@ Dài hạn (1-2 năm) & Phát triển mobile app, AI recommendations, analytics 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{10cm}@{}}
 \toprule
 \textbf{Smart Canteen AR - Nhóm 5} & \\
 \midrule

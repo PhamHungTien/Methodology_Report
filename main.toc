@@ -54,12 +54,12 @@
 \contentsline {subsection}{\numberline {7.3}Phụ lục C: Mô hình kỹ thuật chi tiết}{41}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Các thông số kỹ thuật}{41}{subsubsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.4}Phụ lục D: Technology Roadmap}{42}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Phụ lục E: Legal và Compliance}{42}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Khung pháp lý}{42}{subsubsection.7.5.1}%
-\contentsline {subsubsection}{\numberline {7.5.2}Quản lý rủi ro pháp lý}{42}{subsubsection.7.5.2}%
-\contentsline {section}{\numberline {8}Kết luận và Call-to-Action}{43}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Tóm tắt giá trị dự án}{43}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Roadmap thành công}{43}{subsection.8.2}%
+\contentsline {subsection}{\numberline {7.5}Phụ lục E: Khía cạnh bảo mật và tuân thủ}{42}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Bảo mật dữ liệu}{42}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Cân nhắc về tuân thủ}{42}{subsubsection.7.5.2}%
+\contentsline {section}{\numberline {8}Kết luận và đánh giá đồ án}{43}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tóm tắt thành quả đạt được}{43}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Timeline thực hiện đồ án}{43}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Kết luận và đánh giá}{44}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Hạn chế và đề xuất cải tiến}{44}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Hướng phát triển tiếp theo}{45}{subsection.8.5}%
