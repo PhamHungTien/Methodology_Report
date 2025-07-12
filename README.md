@@ -4,7 +4,11 @@ This repository stores the midterm report for the Smart Canteen AR project.
 
 ## Structure
 
-- `tex/` contains the LaTeX source files.
-- `figures/` holds all figure assets referenced by the document.
+- `src/` contains the LaTeX source files.
+- `images/` holds all figure assets referenced by the document.
+- `build/` is created when compiling the PDF and is ignored in version control.
 
-Compile `tex/main.tex` with your preferred LaTeX distribution to generate the PDF.
+## Building
+
+Run `make` to compile `src/main.tex` with `latexmk`. The resulting PDF
+`build/main.pdf` will be generated if a full \LaTeX{} environment is available.
