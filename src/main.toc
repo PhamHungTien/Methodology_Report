@@ -1,0 +1,67 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{Danh mục viết tắt}{5}{Doc-Start}%
+\contentsline {section}{Tóm tắt đồ án}{6}{table.caption.1}%
+\contentsline {section}{\numberline {1}Tổng quan dự án}{8}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tên dự án}{8}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Tầm nhìn}{8}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Sứ mệnh}{8}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Ý tưởng chính của dự án}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Kiến trúc hệ thống}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Điểm đột phá công nghệ}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Chức năng chính}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Dành cho người dùng cuối}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Dành cho quản trị viên}{17}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Mục tiêu của dự án}{20}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Mục tiêu đối với người dùng cuối}{20}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mục tiêu đối với căng tin (quản trị viên)}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Mục tiêu về mặt công nghệ và triển khai}{21}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Tính cấp thiết và tính sáng tạo của dự án}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Tính cấp thiết}{21}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Thách thức hiện tại}{21}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Giải pháp của Smart Canteen AR}{22}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Tính sáng tạo và điểm mới}{22}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Đổi mới công nghệ}{22}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Tích hợp toàn diện}{22}{subsubsection.4.2.2}%
+\contentsline {section}{\numberline {5}Mô hình kinh doanh Lean Canvas}{23}{section.5}%
+\contentsline {section}{\numberline {6}Kế hoạch thực hiện}{24}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Phân tích thị trường chi tiết}{24}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Quy mô thị trường F\&B Việt Nam}{24}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Phân tích TAM-SAM-SOM}{25}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Xác định chân dung khách hàng}{25}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}Xác định thị trường}{26}{subsubsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.5}Các xu thế hiện nay trên thị trường có lợi cho dự án của bạn:}{28}{subsubsection.6.1.5}%
+\contentsline {subsubsection}{\numberline {6.1.6}Ma trận phân tích đối thủ cạnh tranh}{29}{subsubsection.6.1.6}%
+\contentsline {subsubsection}{\numberline {6.1.7}SWOT Analysis}{30}{subsubsection.6.1.7}%
+\contentsline {subsubsection}{\numberline {6.1.8}Nhà cung cấp:}{31}{subsubsection.6.1.8}%
+\contentsline {subsubsection}{\numberline {6.1.9}Sản phẩm thay thế:}{32}{subsubsection.6.1.9}%
+\contentsline {subsection}{\numberline {6.2}Kế hoạch phát triển sản phẩm}{32}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Dự báo tài chính và mô hình kinh doanh}{35}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Cơ cấu chi phí và doanh thu}{35}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Chiến lược Go-to-Market}{36}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Đội ngũ thực hiện}{36}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Thành viên nhóm}{37}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Phân công công việc chi tiết}{38}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}Kỹ năng và kinh nghiệm}{38}{subsubsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.5}Tác động xã hội và môi trường}{39}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Contribution to UN SDGs}{39}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Lợi ích xã hội}{39}{subsubsection.6.5.2}%
+\contentsline {section}{\numberline {7}Phụ lục}{39}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Phụ lục A: Thông tin kỹ thuật chi tiết}{39}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Kiến trúc hệ thống}{40}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Bảo mật và tuân thủ}{40}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Phụ lục B: Nghiên cứu thị trường}{40}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Kết quả khảo sát}{41}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Phụ lục C: Mô hình kỹ thuật chi tiết}{41}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Các thông số kỹ thuật}{41}{subsubsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.4}Phụ lục D: Technology Roadmap}{42}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Phụ lục E: Khía cạnh bảo mật và tuân thủ}{42}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Bảo mật dữ liệu}{42}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Cân nhắc về tuân thủ}{42}{subsubsection.7.5.2}%
+\contentsline {section}{\numberline {8}Kết luận và đánh giá đồ án}{43}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tóm tắt thành quả đạt được}{43}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Timeline thực hiện đồ án}{43}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Kết luận và đánh giá}{44}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Hạn chế và đề xuất cải tiến}{44}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Hướng phát triển tiếp theo}{45}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Thông tin liên hệ nhóm}{45}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Phân công công việc}{46}{subsection.8.7}%
