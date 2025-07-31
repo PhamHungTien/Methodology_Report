@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  13 JUL 2025 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.7.31)  31 JUL 2025 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,38 +1321,33 @@ l.34 ....7}SWOT Analysis}{30}{subsubsection.6.1.7}
 
 
 [4]
-Underfull \hbox (badness 3039) in paragraph at lines 183--184
-[]|\T5/cmr/m/n/12 (+20) JavaScript Object Notation (^^^ành d¤ng dú li»u
- []
-
-
 
 [5]
 
 [6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
-[]|\T5/cmr/m/n/12 (+20) 05-
+Underfull \hbox (badness 3428) in paragraph at lines 237--237
+[]|\T5/cmr/m/n/12 (+20) Nghi¶n cùu lþ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--238
+[]|\T5/cmr/m/n/12 (+20) Thi¸t k¸ h»
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
-[]|\T5/cmr/m/n/12 (+20) 19/05-
+[]|\T5/cmr/m/n/12 (+20) 19/05--
  []
 
 
-Overfull \hbox (0.65538pt too wide) in paragraph at lines 238--239
-\T5/cmr/m/n/12 (-20) 01/06/2025| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
-[]|\T5/cmr/m/n/12 (+20) 02-
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
+[]|\T5/cmr/m/n/12 (+20) Ph¡t triºn
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 240--241
-[]|\T5/cmr/m/n/12 (+20) 30/06-
+[]|\T5/cmr/m/n/12 (+20) 30/06--
  []
 
 
@@ -1443,7 +1438,7 @@ Package pdftex.def Info: ../images/ui_admin_quan_ly_thuc_don.png  used on input
 File: ../images/ui_admin_quan_ly_don_hang.png Graphic file (type png)
 <use ../images/ui_admin_quan_ly_don_hang.png>
 Package pdftex.def Info: ../images/ui_admin_quan_ly_don_hang.png  used on input
- line 397.
+ line 398.
 (pdftex.def)             Requested size: 409.71692pt x 343.0744pt.
 
 
@@ -1452,7 +1447,7 @@ Package pdftex.def Info: ../images/ui_admin_quan_ly_don_hang.png  used on input
 File: ../images/ui_admin_bao_cao_doanh_thu.png Graphic file (type png)
 <use ../images/ui_admin_bao_cao_doanh_thu.png>
 Package pdftex.def Info: ../images/ui_admin_bao_cao_doanh_thu.png  used on inpu
-t line 410.
+t line 411.
 (pdftex.def)             Requested size: 409.71692pt x 343.0744pt.
 
 
@@ -1461,7 +1456,7 @@ t line 410.
 File: ../images/ui_admin_quan_ly_nguoi_dung.png Graphic file (type png)
 <use ../images/ui_admin_quan_ly_nguoi_dung.png>
 Package pdftex.def Info: ../images/ui_admin_quan_ly_nguoi_dung.png  used on inp
-ut line 422.
+ut line 423.
 (pdftex.def)             Requested size: 409.71692pt x 343.0744pt.
 
 
@@ -1482,11 +1477,6 @@ ut line 422.
 [26]
 
 [27]
-Overfull \hbox (1.18546pt too wide) in paragraph at lines 766--766
-[]|\T5/cmr/bx/n/12 (-20) GrabFood|  
- []
-
-
 
 [28]
 
@@ -1505,36 +1495,6 @@ Overfull \hbox (1.18546pt too wide) in paragraph at lines 766--766
 [35]
 
 [36]
-Overfull \hbox (4.54498pt too wide) in paragraph at lines 1031--1031
-\T5/cmr/m/n/12 (-20) 18/05/2025)|  
- []
-
-
-Overfull \hbox (5.13234pt too wide) in paragraph at lines 1032--1032
-\T5/cmr/m/n/12 (-20) 01/06/2025)|  
- []
-
-
-Overfull \hbox (4.83865pt too wide) in paragraph at lines 1033--1033
-\T5/cmr/m/n/12 (-20) 29/06/2025)|  
- []
-
-
-Overfull \hbox (5.13234pt too wide) in paragraph at lines 1034--1034
-\T5/cmr/m/n/12 (-20) 06/07/2025)|  
- []
-
-
-Overfull \hbox (4.54498pt too wide) in paragraph at lines 1035--1035
-\T5/cmr/m/n/12 (-20) 16/07/2025)|  
- []
-
-
-Overfull \hbox (4.54498pt too wide) in paragraph at lines 1036--1036
-\T5/cmr/m/n/12 (-20) 16/07/2025)|  
- []
-
-
 
 [37]
 
@@ -1558,11 +1518,6 @@ Overfull \vbox (10.46921pt too high) has occurred while \output is active []
 
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1336--1337
-
- []
-
-
 
 [47] (./main.aux)
  ***********
@@ -1574,7 +1529,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  34603 strings out of 473190
- 678701 string characters out of 5715801
+ 678701 string characters out of 5715800
  1134173 words of memory out of 5000000
  56950 multiletter control sequences out of 15000+600000
  585608 words of font info for 179 fonts, out of 8000000 for 9000
@@ -1588,7 +1543,7 @@ texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/texlive/20
 st/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
 pe1/vntex/vnr/vnti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/vntex/
 vnr/vntt12.pfb>
-Output written on main.pdf (48 pages, 37713842 bytes).
+Output written on main.pdf (48 pages, 37714192 bytes).
 PDF statistics:
  759 PDF objects out of 1000 (max. 8388607)
  641 compressed objects within 7 object streams
